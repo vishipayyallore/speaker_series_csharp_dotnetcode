@@ -1,4 +1,6 @@
 ﻿using System;
+using VS2019.Enhanced.Scrollbar.Demo.Demos;
+using VS2019.Enhanced.Scrollbar.Demo.Helper;
 using VS2019.Enhanced.Scrollbar.Demo.Models;
 using static System.Console;
 
@@ -10,9 +12,14 @@ namespace VS2019.Enhanced.Scrollbar.Demo
 
         static void Main(string[] args)
         {
-            ForegroundColor = ConsoleColor.Blue;
 
-            WriteLine("Hello World!");
+            int Age = 10;
+
+            var demoHelper = new DemoHelper();
+
+            demoHelper
+                .ShowDemoOf(new ExtensionMethodsDemo(), ConsoleColor.Blue)
+                .ShowDemoOf(new PatternMatchingDemo(), ConsoleColor.Yellow);
 
             WriteLine("\n\nPress any key ...");
             ReadLine();
