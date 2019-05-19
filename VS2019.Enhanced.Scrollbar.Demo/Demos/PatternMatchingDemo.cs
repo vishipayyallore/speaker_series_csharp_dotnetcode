@@ -4,6 +4,7 @@ using static System.Console;
 
 namespace VS2019.Enhanced.Scrollbar.Demo.Demos
 {
+
     public class PatternMatchingDemo : IDataTypeDemo
     {
         public string Title => GetType().Name;
