@@ -31,11 +31,17 @@ namespace EmployeesWebService
         [WebMethod]
         public List<Employee> GetAllEmployees()
         {
-            
-
-            return listEmployees;
+            return GetEmployees();
         }
 
+        [WebMethod]
+        public string GetAllEmployeesV2()
+        {
+            var employees = GetEmployees();
+
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            return js.Serialize(employees);
+        }
 
         private List<Employee> GetEmployees()
         {
@@ -65,6 +71,8 @@ namespace EmployeesWebService
                     listEmployees.Add(employee);
                 }
             }
+
+            return listEmployees;
         }
 
 
