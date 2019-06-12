@@ -41,6 +41,39 @@ namespace FirstWebApi.Controllers
             return _employeesDbContext.Employee.Where(record => record.Id == id).FirstOrDefault();
         }
 
+
+        [HttpPost]
+        public ActionResult<IEnumerable<Employee>> AddEmployee([FromBody] Employee employee)
+        {
+            employee = new Employee()
+            {
+                Name = "Rajesh Agarwal",
+                Gender = "Male",
+                Salary = 1234.89M
+            };
+
+
+            _employeesDbContext.Employee.Add(employee);
+
+            _employeesDbContext.SaveChanges();
+
+            return Created("", employee);
+        }
+
+        [HttpPut]
+        public ActionResult<IEnumerable<Employee>> UpdateEmployee([FromBody] Employee employee)
+        {
+
+
+            var employee1 = _employeesDbContext.Employee.Where(record => record.Id == employee.Id).FirstOrDefault();
+
+            employee1.Salary = employee.Salary;
+
+            _employeesDbContext.SaveChanges();
+
+            return NoContent();
+        }
+
     }
 
 }
