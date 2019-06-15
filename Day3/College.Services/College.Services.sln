@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "College.Services", "College.Services\College.Services.csproj", "{33E5ADDE-3F30-4509-B373-2F5C3E24DAB0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{AECC2083-8D9B-4756-B2A7-79F778E2E1F5}"
+	ProjectSection(SolutionItems) = preProject
+		SqlScripts\Create_Professors.sql = SqlScripts\Create_Professors.sql
+		SqlScripts\Insert_Professors.sql = SqlScripts\Insert_Professors.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
