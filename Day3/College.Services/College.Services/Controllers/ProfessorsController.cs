@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using College.Services.Business;
+using College.Services.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace College.Services.Controllers
 {
@@ -11,8 +10,21 @@ namespace College.Services.Controllers
     [ApiController]
     public class ProfessorsController : ControllerBase
     {
+        readonly ProfessorsBusiness _professorsBusiness;
+
+        public ProfessorsController(IConfiguration configuration)
+        {
+            _professorsBusiness = new ProfessorsBusiness(configuration);
+        }
 
 
+        [HttpGet]
+        public ActionResult<IEnumerable<Professor>> Get()
+        {
+            var professors = _professorsBusiness.GetProfessors();
+
+            return Ok(professors);
+        }
 
     }
 
