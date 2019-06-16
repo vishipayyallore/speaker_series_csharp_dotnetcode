@@ -47,6 +47,14 @@ namespace College.Services.Controllers
             return Created(string.Empty, createdProfessor);
         }
 
+        [HttpPut]
+        public ActionResult UpdateProfessor([FromBody]Professor professor)
+        {
+            var _ = _professorsBusiness.UpdateProfessor(professor);
+
+            return NoContent();
+        }
+
     }
 
 }

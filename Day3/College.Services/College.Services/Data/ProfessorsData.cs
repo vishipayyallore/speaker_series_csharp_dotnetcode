@@ -47,6 +47,26 @@ namespace College.Services.Data
             return professor;
         }
 
+
+        public Professor UpdateProfessor(Professor professor)
+        {
+            if (!_collegeDbContext.Professors.Any(record => record.Id == professor.Id))
+            {
+                return null;
+            }
+
+
+            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.Id == professor.Id).FirstOrDefault();
+
+            // Modifying the data
+            retrievedProfessor.Salary = professor.Salary;
+            retrievedProfessor.IsPhd = professor.IsPhd;
+
+            _collegeDbContext.SaveChanges();
+
+            return professor;
+        }
+
     }
 
 }

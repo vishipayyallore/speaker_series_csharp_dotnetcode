@@ -31,6 +31,11 @@ namespace College.Services.Business
             return _professorsData.AddProfessor(professor);
         }
 
+        public Professor UpdateProfessor(Professor professor)
+        {
+            return _professorsData.UpdateProfessor(professor);
+        }
+
     }
 
 }
