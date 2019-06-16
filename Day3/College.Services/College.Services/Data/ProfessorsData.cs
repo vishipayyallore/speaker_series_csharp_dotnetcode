@@ -38,6 +38,15 @@ namespace College.Services.Data
             return _collegeDbContext.Professors.Where(record => record.Id == id).FirstOrDefault();
         }
 
+        public Professor AddProfessor(Professor professor)
+        {
+            _collegeDbContext.Professors.Add(professor);
+
+            _collegeDbContext.SaveChanges();
+
+            return professor;
+        }
+
     }
 
 }

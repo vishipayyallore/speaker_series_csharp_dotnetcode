@@ -39,6 +39,14 @@ namespace College.Services.Controllers
             return Ok(professor);
         }
 
+        [HttpPost]
+        public ActionResult<Professor> AddProfessor([FromBody]Professor professor)
+        {
+            var createdProfessor = _professorsBusiness.AddProfessor(professor);
+
+            return Created(string.Empty, createdProfessor);
+        }
+
     }
 
 }

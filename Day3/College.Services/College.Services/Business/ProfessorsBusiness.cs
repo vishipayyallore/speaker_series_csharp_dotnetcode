@@ -25,6 +25,12 @@ namespace College.Services.Business
             return _professorsData.GetProfessorById(id);
         }
 
+
+        public Professor AddProfessor(Professor professor)
+        {
+            return _professorsData.AddProfessor(professor);
+        }
+
     }
 
 }
