@@ -1,6 +1,7 @@
 ﻿using College.Services.Data;
 using College.Services.Entities;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 
 namespace College.Services.Business
@@ -17,6 +18,11 @@ namespace College.Services.Business
         public IEnumerable<Professor> GetProfessors()
         {
             return _professorsData.GetProfessors();
+        }
+
+        public Professor GetProfessorById(Guid id)
+        {
+            return _professorsData.GetProfessorById(id);
         }
 
     }
