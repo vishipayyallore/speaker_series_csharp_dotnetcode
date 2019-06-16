@@ -31,7 +31,7 @@ namespace College.Services.Controllers
         {
             var professor = _professorsBusiness.GetProfessorById(id);
 
-            if(professor == null)
+            if (professor == null)
             {
                 return NotFound();
             }
@@ -51,6 +51,19 @@ namespace College.Services.Controllers
         public ActionResult UpdateProfessor([FromBody]Professor professor)
         {
             var _ = _professorsBusiness.UpdateProfessor(professor);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult DeleteProfessor(Guid id)
+        {
+            var professorDeleted = _professorsBusiness.DeleteProfessorById(id);
+
+            if (!professorDeleted)
+            {
+                return StatusCode(500, $"Unable to delete Professor with id {id}");
+            }
 
             return NoContent();
         }

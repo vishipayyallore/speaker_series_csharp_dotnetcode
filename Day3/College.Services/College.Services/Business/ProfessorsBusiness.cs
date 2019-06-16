@@ -36,6 +36,11 @@ namespace College.Services.Business
             return _professorsData.UpdateProfessor(professor);
         }
 
+        public bool DeleteProfessorById(Guid id)
+        {
+            return _professorsData.DeleteProfessorById(id);
+        }
+
     }
 
 }

@@ -67,6 +67,23 @@ namespace College.Services.Data
             return professor;
         }
 
+
+        public bool DeleteProfessorById(Guid id)
+        {
+            if (!_collegeDbContext.Professors.Any(record => record.Id == id))
+            {
+                return false;
+            }
+
+            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.Id == id).FirstOrDefault();
+
+            _collegeDbContext.Professors.Remove(retrievedProfessor);
+
+            _collegeDbContext.SaveChanges();
+
+            return true;
+        }
+
     }
 
 }
