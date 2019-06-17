@@ -1,6 +1,5 @@
-﻿using College.Business;
-using College.Comman.Entities;
-using College.Data.Persistence;
+﻿using College.Comman.Entities;
+using College.Comman.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,11 +11,11 @@ namespace College.Api.Controllers
     [ApiController]
     public class ProfessorsController : ControllerBase
     {
-        readonly ProfessorsBusiness _professorsBusiness;
+        readonly IProfessorsBusiness _professorsBusiness;
 
-        public ProfessorsController(CollegeDbContext collegeDbContext)
+        public ProfessorsController(IProfessorsBusiness professorsBusiness)
         {
-            _professorsBusiness = new ProfessorsBusiness(collegeDbContext);
+            _professorsBusiness = professorsBusiness;
         }
 
         [HttpGet]

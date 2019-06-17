@@ -1,19 +1,18 @@
 ﻿using College.Comman.Entities;
-using College.Data;
-using College.Data.Persistence;
+using College.Comman.Interface;
 using System;
 using System.Collections.Generic;
 
 namespace College.Business
 {
 
-    public class ProfessorsBusiness
+    public class ProfessorsBusiness : IProfessorsBusiness
     {
-        readonly ProfessorsData _professorsData;
+        readonly IProfessorsData _professorsData;
 
-        public ProfessorsBusiness(CollegeDbContext collegeDbContext)
+        public ProfessorsBusiness(IProfessorsData professorsData)
         {
-            _professorsData = new ProfessorsData(collegeDbContext);
+            _professorsData = professorsData;
         }
 
         public IEnumerable<Professor> GetProfessors()

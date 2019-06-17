@@ -1,4 +1,7 @@
-﻿using College.Comman;
+﻿using College.Business;
+using College.Comman;
+using College.Comman.Interface;
+using College.Data;
 using College.Data.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +29,10 @@ namespace College.Api
             // Adding 
             var connectionString = Configuration[Constants.ConnectionString];
             services.AddDbContext<CollegeDbContext>(o => o.UseSqlServer(connectionString));
+
+            // Adding Other Application Services
+            services.AddScoped<IProfessorsBusiness, ProfessorsBusiness>();
+            services.AddScoped<IProfessorsData, ProfessorsData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
