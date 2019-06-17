@@ -1,14 +1,13 @@
-﻿using College.Data.Entities;
+﻿using College.Comman.Entities;
+using College.Comman.Interface;
 using College.Data.Persistence;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace College.Data
 {
-    public class ProfessorsData
+    public class ProfessorsData : IProfessorsData
     {
         readonly CollegeDbContext _collegeDbContext;
 

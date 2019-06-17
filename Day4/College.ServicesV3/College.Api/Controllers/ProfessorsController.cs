@@ -1,8 +1,7 @@
 ﻿using College.Business;
-using College.Data.Entities;
+using College.Comman.Entities;
 using College.Data.Persistence;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 

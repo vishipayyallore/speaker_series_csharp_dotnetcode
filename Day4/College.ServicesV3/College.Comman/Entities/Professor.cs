@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace College.Data.Entities
+namespace College.Comman.Entities
 {
     public class Professor
     {

@@ -1,7 +1,6 @@
-﻿using College.Data;
-using College.Data.Entities;
+﻿using College.Comman.Entities;
+using College.Data;
 using College.Data.Persistence;
-using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 
