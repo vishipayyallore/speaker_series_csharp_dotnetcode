@@ -1,6 +1,6 @@
 ﻿using static System.Console;
 
-namespace MethodChainingDemo
+namespace MethodChainingDemo.ChainingDemo
 {
 
     public class SoftwareDeveloper
