@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigureFrameworkServicesV2", "ConfigureFrameworkServicesV2\ConfigureFrameworkServicesV2.csproj", "{BE6B1D9A-6F20-4112-B53D-F9D82E32DAD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE6B1D9A-6F20-4112-B53D-F9D82E32DAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE6B1D9A-6F20-4112-B53D-F9D82E32DAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE6B1D9A-6F20-4112-B53D-F9D82E32DAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE6B1D9A-6F20-4112-B53D-F9D82E32DAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98900398-C206-41EE-8DD2-ECA49192D39D}
+	EndGlobalSection
+EndGlobal
