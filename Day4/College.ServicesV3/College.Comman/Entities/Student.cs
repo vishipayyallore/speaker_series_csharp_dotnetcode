@@ -21,6 +21,9 @@ namespace College.Comman.Entities
         public decimal Fees { get; set; }
 
         public Guid ProfessorId { get; set; }
+
+        //[ForeignKey("Id")]
+        //public Professor Professor { get; set; }
     }
 
 }
