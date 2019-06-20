@@ -1,6 +1,7 @@
 ﻿using College.Comman.Entities;
 using College.Comman.Interface;
 using College.Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,18 +19,21 @@ namespace College.Data
 
         public IEnumerable<Professor> GetProfessors()
         {
-            return _collegeDbContext.Professors.ToList();
+            return _collegeDbContext
+                        .Professors
+                        .Include(student => student.Students)
+                        .ToList();
         }
 
 
         public Professor GetProfessorById(Guid id)
         {
-            if (!_collegeDbContext.Professors.Any(record => record.Id == id))
+            if (!_collegeDbContext.Professors.Any(record => record.ProfessorId == id))
             {
                 return null;
             }
 
-            return _collegeDbContext.Professors.Where(record => record.Id == id).FirstOrDefault();
+            return _collegeDbContext.Professors.Where(record => record.ProfessorId == id).FirstOrDefault();
         }
 
         public Professor AddProfessor(Professor professor)
@@ -44,13 +48,13 @@ namespace College.Data
 
         public Professor UpdateProfessor(Professor professor)
         {
-            if (!_collegeDbContext.Professors.Any(record => record.Id == professor.Id))
+            if (!_collegeDbContext.Professors.Any(record => record.ProfessorId == professor.ProfessorId))
             {
                 return null;
             }
 
 
-            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.Id == professor.Id).FirstOrDefault();
+            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.ProfessorId == professor.ProfessorId).FirstOrDefault();
 
             // Modifying the data
             retrievedProfessor.Salary = professor.Salary;
@@ -64,12 +68,12 @@ namespace College.Data
 
         public bool DeleteProfessorById(Guid id)
         {
-            if (!_collegeDbContext.Professors.Any(record => record.Id == id))
+            if (!_collegeDbContext.Professors.Any(record => record.ProfessorId == id))
             {
                 return false;
             }
 
-            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.Id == id).FirstOrDefault();
+            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.ProfessorId == id).FirstOrDefault();
 
             _collegeDbContext.Professors.Remove(retrievedProfessor);
 
