@@ -1,6 +1,7 @@
 ﻿using College.Comman.Entities;
 using College.Comman.Interface;
 using College.Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,10 @@ namespace College.Data
 
         public IEnumerable<Professor> GetProfessors()
         {
-            return _collegeDbContext.Professors.ToList();
+            return _collegeDbContext
+                .Professors
+                .Include(student => student.Students)
+                .ToList();
         }
 
 

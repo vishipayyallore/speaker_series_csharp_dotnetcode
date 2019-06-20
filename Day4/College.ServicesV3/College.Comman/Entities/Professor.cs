@@ -19,7 +19,7 @@ namespace College.Comman.Entities
 
         public bool IsPhd { get; set; }
 
-        public ICollection<Student> Students { get; set; } = new List<Student>();
+        public ICollection<Student> Students { get; set; } 
     }
 
 }
