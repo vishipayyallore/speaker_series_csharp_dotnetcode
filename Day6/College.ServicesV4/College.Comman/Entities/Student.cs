@@ -13,17 +13,16 @@ namespace College.Comman.Entities
 
         public string RollNumber { get; set; }
 
+        [ForeignKey("ProfessorId")]
+        public Professor Professor { get; set; }
+
+        public Guid ProfessorId { get; set; }
 
         public DateTime Dob { get; set; }
 
         public bool IsAthlete { get; set; }
 
         public decimal Fees { get; set; }
-
-        public Guid ProfessorId { get; set; }
-
-        [ForeignKey("Id")]
-        public Professor Professor { get; set; }
     }
 
 }
