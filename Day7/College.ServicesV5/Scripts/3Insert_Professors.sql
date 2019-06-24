@@ -1,5 +1,3 @@
-USE [Sample]
-GO
 
 INSERT INTO [dbo].[Professors] ( [Name], [Doj], [Teaches], [Salary], [IsPhd])  VALUES ('Shiva Sai', '01-Jan-2010', 'C Sharp; Java; Python', 1234.56, 1 )
 GO

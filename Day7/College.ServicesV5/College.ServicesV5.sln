@@ -13,10 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Comman", "College.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{493CD0F8-42DF-42FF-A6B4-B5D155D31F9D}"
 	ProjectSection(SolutionItems) = preProject
-		Scripts\Create_Professors.sql = Scripts\Create_Professors.sql
-		Scripts\Create_Students.sql = Scripts\Create_Students.sql
-		Scripts\Insert_Professors.sql = Scripts\Insert_Professors.sql
-		Scripts\Insert_Students.sql = Scripts\Insert_Students.sql
+		Scripts\1Create_Professors.sql = Scripts\1Create_Professors.sql
+		Scripts\2Create_Students.sql = Scripts\2Create_Students.sql
+		Scripts\3Insert_Professors.sql = Scripts\3Insert_Professors.sql
+		Scripts\4Insert_Students.sql = Scripts\4Insert_Students.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{46505F43-84CE-4366-81F7-C052AD05CAD1}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
 Global

@@ -1,5 +1,3 @@
-USE [Sample]
-GO
 
 /****** Object:  Table [dbo].[Students]    Script Date: 6/20/2019 10:00:40 PM ******/
 SET ANSI_NULLS ON
