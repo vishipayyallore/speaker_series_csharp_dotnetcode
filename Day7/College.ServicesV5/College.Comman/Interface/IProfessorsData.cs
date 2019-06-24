@@ -15,7 +15,7 @@ namespace College.Comman.Interface
 
         IEnumerable<Professor> GetProfessors();
 
-        Professor UpdateProfessor(Professor professor);
+        Professor UpdateProfessor(Guid id, Professor professor);
     }
 
 }

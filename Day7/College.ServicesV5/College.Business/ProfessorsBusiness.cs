@@ -25,15 +25,14 @@ namespace College.Business
             return _professorsData.GetProfessorById(id);
         }
 
-
         public Professor AddProfessor(Professor professor)
         {
             return _professorsData.AddProfessor(professor);
         }
 
-        public Professor UpdateProfessor(Professor professor)
+        public Professor UpdateProfessor(Guid id, Professor professor)
         {
-            return _professorsData.UpdateProfessor(professor);
+            return _professorsData.UpdateProfessor(id, professor);
         }
 
         public bool DeleteProfessorById(Guid id)

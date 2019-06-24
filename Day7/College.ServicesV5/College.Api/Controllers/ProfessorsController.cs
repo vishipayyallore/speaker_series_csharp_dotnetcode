@@ -47,10 +47,10 @@ namespace College.Api.Controllers
             return Created(string.Empty, createdProfessor);
         }
 
-        [HttpPut]
-        public ActionResult UpdateProfessor([FromBody]Professor professor)
+        [HttpPut("{id}")]
+        public ActionResult UpdateProfessor(Guid id, [FromBody]Professor professor)
         {
-            var _ = _professorsBusiness.UpdateProfessor(professor);
+            var _ = _professorsBusiness.UpdateProfessor(id, professor);
 
             return NoContent();
         }

@@ -46,15 +46,14 @@ namespace College.Data
         }
 
 
-        public Professor UpdateProfessor(Professor professor)
+        public Professor UpdateProfessor(Guid id, Professor professor)
         {
-            if (!_collegeDbContext.Professors.Any(record => record.ProfessorId == professor.ProfessorId))
+            if (!_collegeDbContext.Professors.Any(record => record.ProfessorId == id))
             {
                 return null;
             }
 
-
-            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.ProfessorId == professor.ProfessorId).FirstOrDefault();
+            var retrievedProfessor = _collegeDbContext.Professors.Where(record => record.ProfessorId == id).FirstOrDefault();
 
             // Modifying the data
             retrievedProfessor.Salary = professor.Salary;
