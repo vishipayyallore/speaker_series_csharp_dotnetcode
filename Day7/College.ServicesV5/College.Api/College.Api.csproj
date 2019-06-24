@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\College.Business\College.Business.csproj" />
-    <ProjectReference Include="..\College.Comman\College.Comman.csproj" />
+    <ProjectReference Include="..\College.Comman\College.Common.csproj" />
   </ItemGroup>
 
 </Project>

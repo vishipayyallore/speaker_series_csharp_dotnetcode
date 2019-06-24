@@ -1,8 +1,8 @@
-﻿using College.Comman.Entities;
+﻿using College.Common.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace College.Comman.Interface
+namespace College.Common.Interface
 {
 
     public interface IProfessorsBusiness

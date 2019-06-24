@@ -1,5 +1,5 @@
-﻿using College.Comman.Entities;
-using College.Comman.Interface;
+﻿using College.Common.Entities;
+using College.Common.Interface;
 using College.Data.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;

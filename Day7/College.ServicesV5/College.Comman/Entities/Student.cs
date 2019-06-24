@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace College.Comman.Entities
+namespace College.Common.Entities
 {
     public class Student
     {

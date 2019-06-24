@@ -1,6 +1,6 @@
 ﻿using College.Business;
-using College.Comman;
-using College.Comman.Interface;
+using College.Common;
+using College.Common.Interface;
 using College.Data;
 using College.Data.Persistence;
 using Microsoft.AspNetCore.Builder;

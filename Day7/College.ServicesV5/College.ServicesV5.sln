@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Business", "College
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Api", "College.Api\College.Api.csproj", "{DAE66D4B-70BA-485B-8261-844D6F010E03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Comman", "College.Comman\College.Comman.csproj", "{4DF354CF-EA0D-416D-9D71-189DF5C121BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Common", "College.Comman\College.Common.csproj", "{4DF354CF-EA0D-416D-9D71-189DF5C121BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{493CD0F8-42DF-42FF-A6B4-B5D155D31F9D}"
 	ProjectSection(SolutionItems) = preProject

@@ -1,4 +1,4 @@
-﻿namespace College.Comman
+﻿namespace College.Common
 {
 
     public static class Constants

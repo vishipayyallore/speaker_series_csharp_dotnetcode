@@ -1,5 +1,5 @@
-﻿using College.Comman.Entities;
-using College.Comman.Interface;
+﻿using College.Common.Entities;
+using College.Common.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

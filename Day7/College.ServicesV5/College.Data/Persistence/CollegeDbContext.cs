@@ -1,4 +1,4 @@
-﻿using College.Comman.Entities;
+﻿using College.Common.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace College.Data.Persistence
