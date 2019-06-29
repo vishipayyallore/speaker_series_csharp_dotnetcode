@@ -7,9 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Services", "College
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{AECC2083-8D9B-4756-B2A7-79F778E2E1F5}"
 	ProjectSection(SolutionItems) = preProject
-		SqlScripts\Create_Professors.sql = SqlScripts\Create_Professors.sql
-		SqlScripts\Create_Students.sql = SqlScripts\Create_Students.sql
-		SqlScripts\Insert_Professors.sql = SqlScripts\Insert_Professors.sql
+		SqlScripts\1Create_Professors.sql = SqlScripts\1Create_Professors.sql
+		SqlScripts\2Create_Students.sql = SqlScripts\2Create_Students.sql
+		SqlScripts\3Insert_Professors.sql = SqlScripts\3Insert_Professors.sql
+		SqlScripts\4Insert_Students.sql = SqlScripts\4Insert_Students.sql
 	EndProjectSection
 EndProject
 Global
