@@ -10,9 +10,9 @@ namespace College.Services.BAL
     {
         private readonly ProfessorsDal _professorsData;
 
-        public ProfessorsBal(IConfiguration configuration, CollegeDbContext collegeDbContext)
+        public ProfessorsBal(ProfessorsDal professorsData)
         {
-            _professorsData = new ProfessorsDal(configuration, collegeDbContext);
+            _professorsData = professorsData;
         }
 
         public IEnumerable<Professor> GetProfessors()

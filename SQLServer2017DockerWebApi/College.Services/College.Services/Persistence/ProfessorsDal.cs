@@ -12,7 +12,7 @@ namespace College.Services.Persistence
     {
         private readonly CollegeDbContext _collegeDbContext;
 
-        public ProfessorsDal(IConfiguration configuration, CollegeDbContext collegeDbContext)
+        public ProfessorsDal(CollegeDbContext collegeDbContext)
         {
             _collegeDbContext = collegeDbContext;
         }

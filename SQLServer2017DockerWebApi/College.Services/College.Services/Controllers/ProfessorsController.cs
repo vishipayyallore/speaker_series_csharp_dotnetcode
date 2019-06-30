@@ -14,9 +14,9 @@ namespace College.Services.Controllers
     {
         private readonly ProfessorsBal _professorsBusiness;
 
-        public ProfessorsController(IConfiguration configuration, CollegeDbContext collegeDbContext)
+        public ProfessorsController(ProfessorsBal professorsBusiness)
         {
-            _professorsBusiness = new ProfessorsBal(configuration, collegeDbContext);
+            _professorsBusiness = professorsBusiness;
         }
 
         [HttpGet]
