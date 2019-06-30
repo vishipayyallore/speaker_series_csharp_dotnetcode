@@ -24,7 +24,9 @@ namespace College.Services.Data
 
         public IEnumerable<Professor> GetProfessors()
         {
-            return _collegeDbContext.Professors.ToList();
+            return _collegeDbContext.Professors
+                .Include(student => student.Students)
+                .ToList();
         }
 
 
@@ -35,7 +37,10 @@ namespace College.Services.Data
                 return null;
             }
 
-            return _collegeDbContext.Professors.Where(record => record.ProfessorId == id).FirstOrDefault();
+            return _collegeDbContext.Professors
+                .Where(record => record.ProfessorId == id)
+                .Include(student => student.Students)
+                .FirstOrDefault();
         }
 
         public Professor AddProfessor(Professor professor)

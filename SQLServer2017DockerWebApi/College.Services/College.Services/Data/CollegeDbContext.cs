@@ -13,6 +13,8 @@ namespace College.Services.Data
         }
 
         public DbSet<Professor> Professors { get; set; }
+
+        public DbSet<Student> Students { get; set; }
     }
 
 }
