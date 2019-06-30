@@ -1,7 +1,7 @@
 ﻿using College.Services.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace College.Services.Data
+namespace College.Services.Persistence
 {
 
     public class CollegeDbContext : DbContext

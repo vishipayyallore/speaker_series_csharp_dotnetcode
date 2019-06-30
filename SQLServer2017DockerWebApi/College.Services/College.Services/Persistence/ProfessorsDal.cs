@@ -5,14 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace College.Services.Data
+namespace College.Services.Persistence
 {
 
-    public class ProfessorsData
+    public class ProfessorsDal
     {
         readonly CollegeDbContext _collegeDbContext;
 
-        public ProfessorsData(IConfiguration configuration)
+        public ProfessorsDal(IConfiguration configuration)
         {
             var optionsBuilder = new DbContextOptionsBuilder<CollegeDbContext>();
 
