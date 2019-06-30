@@ -1,8 +1,6 @@
 ﻿using College.Services.BAL;
 using College.Services.Entities;
-using College.Services.Persistence;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 

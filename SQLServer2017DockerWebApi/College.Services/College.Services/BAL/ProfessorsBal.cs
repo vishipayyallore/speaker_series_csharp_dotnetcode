@@ -1,6 +1,5 @@
 ﻿using College.Services.Entities;
 using College.Services.Persistence;
-using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 

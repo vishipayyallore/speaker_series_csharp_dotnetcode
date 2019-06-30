@@ -28,6 +28,7 @@ namespace College.Services
             var connectionString = Configuration[Constants.ConnectionString];
             services.AddDbContext<CollegeDbContext>(o => o.UseSqlServer(connectionString));
 
+            // Application Services
             services.AddScoped<ProfessorsBal>();
             services.AddScoped<ProfessorsDal>();
         }
