@@ -8,11 +8,11 @@ namespace College.Services.BAL
 {
     public class ProfessorsBal
     {
-        readonly ProfessorsDal _professorsData;
+        private readonly ProfessorsDal _professorsData;
 
-        public ProfessorsBal(IConfiguration configuration)
+        public ProfessorsBal(IConfiguration configuration, CollegeDbContext collegeDbContext)
         {
-            _professorsData = new ProfessorsDal(configuration);
+            _professorsData = new ProfessorsDal(configuration, collegeDbContext);
         }
 
         public IEnumerable<Professor> GetProfessors()

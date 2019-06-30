@@ -1,4 +1,5 @@
-﻿using College.Services.Common;
+﻿using College.Services.BAL;
+using College.Services.Common;
 using College.Services.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,9 @@ namespace College.Services
             // Adding EF Core
             var connectionString = Configuration[Constants.ConnectionString];
             services.AddDbContext<CollegeDbContext>(o => o.UseSqlServer(connectionString));
+
+            services.AddScoped<ProfessorsBal>();
+            services.AddScoped<ProfessorsDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

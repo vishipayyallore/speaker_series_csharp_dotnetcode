@@ -10,16 +10,11 @@ namespace College.Services.Persistence
 
     public class ProfessorsDal
     {
-        readonly CollegeDbContext _collegeDbContext;
+        private readonly CollegeDbContext _collegeDbContext;
 
-        public ProfessorsDal(IConfiguration configuration)
+        public ProfessorsDal(IConfiguration configuration, CollegeDbContext collegeDbContext)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<CollegeDbContext>();
-
-            var connectionString = configuration["ConnectionStrings:CollegeDBConnectionString"];
-            optionsBuilder.UseSqlServer(connectionString);
-
-            _collegeDbContext = new CollegeDbContext(optionsBuilder.Options);
+            _collegeDbContext = collegeDbContext;
         }
 
         public IEnumerable<Professor> GetProfessors()
