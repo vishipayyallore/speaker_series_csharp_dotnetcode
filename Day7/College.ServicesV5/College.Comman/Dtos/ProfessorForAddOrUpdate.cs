@@ -3,7 +3,7 @@
 namespace College.Common.Dtos
 {
 
-    public class ProfessorForAdd
+    public class ProfessorForAddOrUpdate
     {
         public string Name { get; set; }
 
