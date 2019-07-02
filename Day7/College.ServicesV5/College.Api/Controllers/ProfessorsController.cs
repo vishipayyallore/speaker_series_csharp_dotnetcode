@@ -1,4 +1,5 @@
-﻿using College.Common.Entities;
+﻿using College.Common.Dtos;
+using College.Common.Entities;
 using College.Common.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -40,8 +41,22 @@ namespace College.Api.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Professor> AddProfessor([FromBody]Professor professor)
+        public ActionResult<Professor> AddProfessor([FromBody]ProfessorForAddOrUpdate professorForAdd)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var professor = new Professor
+            {
+              Name = professorForAdd.Name,
+              Doj = professorForAdd.Doj,
+              Salary = professorForAdd.Salary,
+              IsPhd = professorForAdd.IsPhd,
+              Teaches = professorForAdd.Teaches
+            };
+
             var createdProfessor = _professorsBusiness.AddProfessor(professor);
 
             return Created(string.Empty, createdProfessor);
