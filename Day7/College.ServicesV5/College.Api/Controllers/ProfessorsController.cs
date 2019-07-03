@@ -50,11 +50,11 @@ namespace College.Api.Controllers
 
             var professor = new Professor
             {
-              Name = professorForAdd.Name,
-              Doj = professorForAdd.Doj,
-              Salary = professorForAdd.Salary,
-              IsPhd = professorForAdd.IsPhd,
-              Teaches = professorForAdd.Teaches
+                Name = professorForAdd.Name,
+                Doj = professorForAdd.Doj,
+                Salary = professorForAdd.Salary,
+                IsPhd = professorForAdd.IsPhd,
+                Teaches = professorForAdd.Teaches
             };
 
             var createdProfessor = _professorsBusiness.AddProfessor(professor);
