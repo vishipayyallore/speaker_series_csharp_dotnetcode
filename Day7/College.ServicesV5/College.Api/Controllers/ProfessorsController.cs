@@ -63,8 +63,22 @@ namespace College.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateProfessor(Guid id, [FromBody]Professor professor)
+        public ActionResult UpdateProfessor(Guid id, [FromBody]ProfessorForAddOrUpdate professorForUpdate)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var professor = new Professor
+            {
+                Name = professorForUpdate.Name,
+                Doj = professorForUpdate.Doj,
+                Salary = professorForUpdate.Salary,
+                IsPhd = professorForUpdate.IsPhd,
+                Teaches = professorForUpdate.Teaches
+            };
+
             var _ = _professorsBusiness.UpdateProfessor(id, professor);
 
             return NoContent();
