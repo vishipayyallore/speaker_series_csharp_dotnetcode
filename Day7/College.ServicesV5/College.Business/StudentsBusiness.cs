@@ -1,19 +1,24 @@
 ﻿using College.Common.Entities;
 using College.Common.Interface;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace College.Business
 {
 
-    public class StudentsBusiness: IStudentsBusiness
+    public class StudentsBusiness : IStudentsBusiness
     {
+        readonly IStudentsData _studentsData;
+
+        public StudentsBusiness(IStudentsData studentsData)
+        {
+            _studentsData = studentsData;
+        }
 
         public IEnumerable<Student> GetAllStudents()
         {
-            return null;
+            return _studentsData.GetAllStudents();
         }
+
     }
 
 }

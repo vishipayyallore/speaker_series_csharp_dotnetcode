@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace College.Common.Interface
 {
-    public interface IStudentsBusiness
+    public interface IStudentsData
     {
         IEnumerable<Student> GetAllStudents();
     }
