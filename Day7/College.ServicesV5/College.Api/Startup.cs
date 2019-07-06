@@ -33,6 +33,8 @@ namespace College.Api
             // Adding Other Application Services
             services.AddScoped<IProfessorsBusiness, ProfessorsBusiness>();
             services.AddScoped<IProfessorsData, ProfessorsData>();
+
+            services.AddScoped<IStudentsBusiness, StudentsBusiness>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
