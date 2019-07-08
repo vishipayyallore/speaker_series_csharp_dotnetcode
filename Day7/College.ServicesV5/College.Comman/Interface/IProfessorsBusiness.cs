@@ -1,4 +1,5 @@
-﻿using College.Common.Entities;
+﻿using College.Common.Dtos;
+using College.Common.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -7,7 +8,7 @@ namespace College.Common.Interface
 
     public interface IProfessorsBusiness
     {
-        Professor AddProfessor(Professor professor);
+        Professor AddProfessor(ProfessorForAddOrUpdate professor);
 
         bool DeleteProfessorById(Guid id);
 
@@ -15,7 +16,7 @@ namespace College.Common.Interface
 
         IEnumerable<Professor> GetProfessors();
 
-        Professor UpdateProfessor(Guid id, Professor professor);
+        Professor UpdateProfessor(Guid id, ProfessorForAddOrUpdate professor);
     }
 
 }

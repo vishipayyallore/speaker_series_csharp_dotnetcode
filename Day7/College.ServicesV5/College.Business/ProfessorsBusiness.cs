@@ -1,4 +1,5 @@
-﻿using College.Common.Entities;
+﻿using College.Common.Dtos;
+using College.Common.Entities;
 using College.Common.Interface;
 using System;
 using System.Collections.Generic;
@@ -25,12 +26,12 @@ namespace College.Business
             return _professorsData.GetProfessorById(id);
         }
 
-        public Professor AddProfessor(Professor professor)
+        public Professor AddProfessor(ProfessorForAddOrUpdate professor)
         {
             return _professorsData.AddProfessor(professor);
         }
 
-        public Professor UpdateProfessor(Guid id, Professor professor)
+        public Professor UpdateProfessor(Guid id, ProfessorForAddOrUpdate professor)
         {
             return _professorsData.UpdateProfessor(id, professor);
         }

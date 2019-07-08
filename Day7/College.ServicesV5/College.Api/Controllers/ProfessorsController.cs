@@ -48,16 +48,7 @@ namespace College.Api.Controllers
                 return BadRequest();
             }
 
-            var professor = new Professor
-            {
-                Name = professorForAdd.Name,
-                Doj = professorForAdd.Doj,
-                Salary = professorForAdd.Salary,
-                IsPhd = professorForAdd.IsPhd,
-                Teaches = professorForAdd.Teaches
-            };
-
-            var createdProfessor = _professorsBusiness.AddProfessor(professor);
+            var createdProfessor = _professorsBusiness.AddProfessor(professorForAdd);
 
             return Created(string.Empty, createdProfessor);
         }
@@ -70,16 +61,7 @@ namespace College.Api.Controllers
                 return BadRequest();
             }
 
-            var professor = new Professor
-            {
-                Name = professorForUpdate.Name,
-                Doj = professorForUpdate.Doj,
-                Salary = professorForUpdate.Salary,
-                IsPhd = professorForUpdate.IsPhd,
-                Teaches = professorForUpdate.Teaches
-            };
-
-            var _ = _professorsBusiness.UpdateProfessor(id, professor);
+            var _ = _professorsBusiness.UpdateProfessor(id, professorForUpdate);
 
             return NoContent();
         }
