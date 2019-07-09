@@ -24,6 +24,17 @@ namespace College.Data
             return _collegeDbContext.Students.ToList();
         }
 
+        public Student GetStudentById(Guid id)
+        {
+            if (!_collegeDbContext.Students.Any(record => record.StudentId == id))
+            {
+                return null;
+            }
+
+            return _collegeDbContext.Students
+                .Where(record => record.StudentId == id)
+                .FirstOrDefault();
+        }
     }
 
 }

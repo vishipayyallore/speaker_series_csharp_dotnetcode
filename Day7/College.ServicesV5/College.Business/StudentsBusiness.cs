@@ -20,7 +20,7 @@ namespace College.Business
             return _studentsData.GetAllStudents();
         }
 
-        public object GetStudentById(Guid id)
+        public Student GetStudentById(Guid id)
         {
             return _studentsData.GetStudentById(id);
         }
