@@ -1,6 +1,7 @@
 ﻿using College.Common.Entities;
 using College.Common.Interface;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace College.Api.Controllers
@@ -24,6 +25,19 @@ namespace College.Api.Controllers
             var students = _studentsBusiness.GetAllStudents();
 
             return Ok(students);
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Professor> GetStudentId(Guid id)
+        {
+            var student = _studentsBusiness.GetStudentById(id);
+
+            if (student == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(student);
         }
 
     }
