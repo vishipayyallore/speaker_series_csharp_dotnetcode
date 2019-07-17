@@ -40,6 +40,18 @@ namespace College.Api.Controllers
             return Ok(student);
         }
 
+        [HttpPost]
+        public ActionResult<Professor> AddProfessor([FromBody]ProfessorForAddOrUpdate professorForAdd)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var createdProfessor = _professorsBusiness.AddProfessor(professorForAdd);
+
+            return Created(string.Empty, createdProfessor);
+        }
     }
 
 }
