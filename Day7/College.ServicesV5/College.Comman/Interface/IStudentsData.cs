@@ -1,4 +1,5 @@
-﻿using College.Common.Entities;
+﻿using College.Common.Dtos;
+using College.Common.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -9,6 +10,8 @@ namespace College.Common.Interface
         IEnumerable<Student> GetAllStudents();
 
         Student GetStudentById(Guid id);
+
+        Student AddStudent(StudentForAddOrUpdate studentForAdd);
     }
 
 }

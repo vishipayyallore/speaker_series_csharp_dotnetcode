@@ -1,4 +1,5 @@
-﻿using College.Common.Entities;
+﻿using College.Common.Dtos;
+using College.Common.Entities;
 using College.Common.Interface;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,11 @@ namespace College.Business
         public StudentsBusiness(IStudentsData studentsData)
         {
             _studentsData = studentsData;
+        }
+
+        public Student AddStudent(StudentForAddOrUpdate studentForAdd)
+        {
+            return _studentsData.AddStudent(studentForAdd);
         }
 
         public IEnumerable<Student> GetAllStudents()

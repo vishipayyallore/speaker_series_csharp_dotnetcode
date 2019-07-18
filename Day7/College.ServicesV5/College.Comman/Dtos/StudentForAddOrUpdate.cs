@@ -18,8 +18,7 @@ namespace College.Common.Dtos
         public Guid ProfessorId { get; set; }
 
         [Required]
-        // [Range(typeof(bool), "false", "true", ErrorMessage = "The field Is Active must be checked.")]
-        public decimal Salary { get; set; }
+        public decimal Fees { get; set; }
     }
 
 }

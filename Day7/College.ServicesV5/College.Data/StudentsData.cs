@@ -1,4 +1,5 @@
-﻿using College.Common.Entities;
+﻿using College.Common.Dtos;
+using College.Common.Entities;
 using College.Common.Interface;
 using College.Data.Persistence;
 using System;
@@ -17,6 +18,23 @@ namespace College.Data
         public StudentsData(CollegeDbContext collegeDbContext)
         {
             _collegeDbContext = collegeDbContext;
+        }
+
+        public Student AddStudent(StudentForAddOrUpdate studentForAdd)
+        {
+            var newStudent = new Student
+            {
+                Name = studentForAdd.Name,
+                ProfessorId = studentForAdd.ProfessorId,
+                RollNumber = studentForAdd.RollNumber,
+                Fees = studentForAdd.Fees
+            };
+
+            _collegeDbContext.Students.Add(newStudent);
+
+            _collegeDbContext.SaveChanges();
+
+            return newStudent;
         }
 
         public IEnumerable<Student> GetAllStudents()
