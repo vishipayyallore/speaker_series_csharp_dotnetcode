@@ -3,17 +3,15 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /src
-COPY myMicroservice.csproj myMicroservice/
-
-RUN dotnet restore myMicroservice/myMicroservice.csproj
-
-WORKDIR /src/myMicroservice
+COPY HelloSerivce.csproj HelloSerivce/
+RUN dotnet restore HelloSerivce/HelloSerivce.csproj
+WORKDIR /src/HelloSerivce
 COPY . .
 
-RUN dotnet build myMicroservice.csproj -c Release -o /app
+RUN dotnet build HelloSerivce.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish myMicroservice.csproj -c Release -o /app
+RUN dotnet publish HelloSerivce.csproj -c Release -o /app
 
 FROM base AS final
 COPY --from=publish /app .
