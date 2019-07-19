@@ -3,7 +3,7 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /src
-COPY HelloSerivce.csproj HelloSerivce/
+COPY HelloSerivce.csproj HelloSerivce
 RUN dotnet restore HelloSerivce/HelloSerivce.csproj
 WORKDIR /src/HelloSerivce
 COPY . .
