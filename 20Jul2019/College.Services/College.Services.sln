@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{AC441E73-76E8-46A4-BC50-06488934DF78}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,7 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{AC44
 		SqlScripts\4Insert_Students.sql = SqlScripts\4Insert_Students.sql
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Services", "College.Services\College.Services.csproj", "{8AE941FB-AB28-449B-8046-0DBAE3B1C44E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AE941FB-AB28-449B-8046-0DBAE3B1C44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE941FB-AB28-449B-8046-0DBAE3B1C44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE941FB-AB28-449B-8046-0DBAE3B1C44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE941FB-AB28-449B-8046-0DBAE3B1C44E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
