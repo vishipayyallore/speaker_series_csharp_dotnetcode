@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{AC441E73-76E8-46A4-BC50-06488934DF78}"
+	ProjectSection(SolutionItems) = preProject
+		SqlScripts\1Create_Professors.sql = SqlScripts\1Create_Professors.sql
+		SqlScripts\2Create_Students.sql = SqlScripts\2Create_Students.sql
+		SqlScripts\3Insert_Professors.sql = SqlScripts\3Insert_Professors.sql
+		SqlScripts\4Insert_Students.sql = SqlScripts\4Insert_Students.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EEE0BD3-8A0C-48AE-B36A-D35EE6604E75}
+	EndGlobalSection
+EndGlobal
