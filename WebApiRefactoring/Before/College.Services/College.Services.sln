@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{0E4A0B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Api", "Source\College.Api\College.Api.csproj", "{F52A3F07-3454-4206-8D5D-F4E93AD70C48}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Business", "Source\College.Business\College.Business.csproj", "{9A0FCB22-6A89-4557-B726-5A7F54A54119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.BLL", "Source\College.Business\College.BLL.csproj", "{9A0FCB22-6A89-4557-B726-5A7F54A54119}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Data", "Source\College.Data\College.Data.csproj", "{E3DF6983-881A-4DB6-8724-6883316095E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.DAL", "Source\College.Data\College.DAL.csproj", "{E3DF6983-881A-4DB6-8724-6883316095E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

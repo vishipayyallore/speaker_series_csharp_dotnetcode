@@ -1,10 +1,10 @@
-﻿using College.Data;
-using College.Data.Entities;
+﻿using College.DAL;
+using College.DAL.Entities;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 
-namespace College.Business
+namespace College.BLL
 {
 
     public class ProfessorsBusiness

@@ -1,7 +1,7 @@
-﻿using College.Data.Entities;
+﻿using College.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace College.Data.Persistence
+namespace College.DAL.Persistence
 {
 
     public class CollegeDbContext : DbContext

@@ -1,12 +1,12 @@
-﻿using College.Data.Entities;
-using College.Data.Persistence;
+﻿using College.DAL.Entities;
+using College.DAL.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace College.Data
+namespace College.DAL
 {
     public class ProfessorsData
     {

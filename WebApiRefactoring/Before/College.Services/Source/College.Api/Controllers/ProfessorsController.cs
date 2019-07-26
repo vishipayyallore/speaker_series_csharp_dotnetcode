@@ -1,5 +1,5 @@
-﻿using College.Business;
-using College.Data.Entities;
+﻿using College.BLL;
+using College.DAL.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;

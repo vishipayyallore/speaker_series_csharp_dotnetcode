@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\College.Business\College.Business.csproj" />
+    <ProjectReference Include="..\College.Business\College.BLL.csproj" />
   </ItemGroup>
 
 </Project>
