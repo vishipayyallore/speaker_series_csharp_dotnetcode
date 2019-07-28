@@ -7,7 +7,7 @@ namespace College.DAL.Entities
     public class Professor
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid ProfessorId { get; set; }
 
         public string Name { get; set; }
 

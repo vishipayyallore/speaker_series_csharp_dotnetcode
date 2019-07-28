@@ -7,7 +7,7 @@ namespace College.DAL.Entities
     public class Student
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid StudentId { get; set; }
 
         public string Name { get; set; }
 
@@ -17,10 +17,6 @@ namespace College.DAL.Entities
         public Professor Professor { get; set; }
 
         public Guid ProfessorId { get; set; }
-
-        public DateTime Dob { get; set; }
-
-        public bool IsAthlete { get; set; }
 
         public decimal Fees { get; set; }
     }

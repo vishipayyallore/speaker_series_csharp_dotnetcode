@@ -13,6 +13,8 @@ namespace College.DAL.Persistence
         }
 
         public DbSet<Professor> Professors { get; set; }
+
+        public DbSet<Student> Students { get; set; }
     }
 
 }
