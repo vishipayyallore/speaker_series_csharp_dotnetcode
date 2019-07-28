@@ -24,7 +24,10 @@ namespace College.DAL
 
         public IEnumerable<Professor> GetProfessors()
         {
-            return _collegeDbContext.Professors.ToList();
+            return _collegeDbContext
+                        .Professors
+                        .Include(row => row.Students)
+                        .ToList();
         }
 
 
