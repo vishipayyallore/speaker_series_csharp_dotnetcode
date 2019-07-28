@@ -13,9 +13,6 @@ namespace College.DAL.Entities
 
         public string RollNumber { get; set; }
 
-        [ForeignKey("ProfessorId")]
-        public Professor Professor { get; set; }
-
         public Guid ProfessorId { get; set; }
 
         public decimal Fees { get; set; }
