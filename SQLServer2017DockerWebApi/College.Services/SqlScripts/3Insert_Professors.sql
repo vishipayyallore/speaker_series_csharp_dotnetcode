@@ -9,3 +9,5 @@ INSERT INTO [dbo].[Professors] ( [ProfessorId], [Name], [Doj], [Teaches], [Salar
 VALUES ('65CA4196-B519-493B-BF96-F881544BD9F4', 'Mohd Azim', '01-Mar-2010', 'F Sharp; ML; AI', 3456.78, 1 )
 GO
 
+SELECT * FROM  [dbo].[Professors] 
+SELECT * FROM  [dbo].[Students] 
