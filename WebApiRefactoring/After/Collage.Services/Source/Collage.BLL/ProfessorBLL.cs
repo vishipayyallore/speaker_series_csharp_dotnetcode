@@ -1,6 +1,5 @@
 ﻿using Collage.Common.Entities;
 using Collage.Common.Interfaces;
-using System;
 using System.Collections.Generic;
 
 namespace Collage.BLL
