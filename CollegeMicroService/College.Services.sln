@@ -6,6 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "College.Services", "College.Services\College.Services.csproj", "{1B2312A7-A251-434A-AD39-34D595329A0D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D4471BAB-021D-481F-855C-593E18FD96DE}"
+	ProjectSection(SolutionItems) = preProject
+		..\SQLServer2017DockerWebApi\College.Services\SqlScripts\1Create_Professors.sql = ..\SQLServer2017DockerWebApi\College.Services\SqlScripts\1Create_Professors.sql
+		..\SQLServer2017DockerWebApi\College.Services\SqlScripts\2Create_Students.sql = ..\SQLServer2017DockerWebApi\College.Services\SqlScripts\2Create_Students.sql
+		..\SQLServer2017DockerWebApi\College.Services\SqlScripts\3Insert_Professors.sql = ..\SQLServer2017DockerWebApi\College.Services\SqlScripts\3Insert_Professors.sql
+		..\SQLServer2017DockerWebApi\College.Services\SqlScripts\4Insert_Students.sql = ..\SQLServer2017DockerWebApi\College.Services\SqlScripts\4Insert_Students.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
