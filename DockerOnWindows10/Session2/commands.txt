@@ -1,0 +1,31 @@
+npm install -g express-generator
+express --view=pug sampleexpressapp
+cd firstexpressapp
+npm install
+SET DEBUG=firstexpressapp:* & npm start
+
+cd sampleexpressapp
+npm install
+SET DEBUG=sampleexpressapp:* & npm start
+
+FROM node:latest
+MAINTAINER Viswanatha Swamy
+
+COPY . /app
+WORKDIR /app
+
+RUN npm install
+
+EXPOSE 3010
+ENTRYPOINT ["npm", "start"]
+
+docker build -f Dockerfile -t vishipayyallore/sampleapp2 .
+
+docker run -d -p 8080:3020 vishipayyallore/sampleapp2
+
+docker info
+
+docker run -d -p 8020:80 vishipayyallore/collegeservices
+
+
+
