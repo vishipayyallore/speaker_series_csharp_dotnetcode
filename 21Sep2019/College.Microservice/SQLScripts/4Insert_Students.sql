@@ -7,3 +7,5 @@ INSERT INTO [dbo].[Students] ([Name], [RollNumber], [ProfessorId],[Fees]) VALUES
 GO
 
 
+SELECT * FROM  [dbo].[Professors] 
+SELECT * FROM  [dbo].[Students] 
