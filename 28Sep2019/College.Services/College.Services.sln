@@ -5,7 +5,16 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{A8827ED5-B694-4F3C-81E9-3FEB25E679A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "College.Api", "Source\College.Api\College.Api.csproj", "{304C1C4F-9550-405F-B1C2-F9F50E7CA49D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Api", "Source\College.Api\College.Api.csproj", "{304C1C4F-9550-405F-B1C2-F9F50E7CA49D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{E96BC83A-17C8-4EE9-9E37-3467ACDF89E5}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\1Create_Professors.sql = ..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\1Create_Professors.sql
+		..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\2Create_Students.sql = ..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\2Create_Students.sql
+		..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\3Insert_Professors.sql = ..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\3Insert_Professors.sql
+		..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\4Insert_Students.sql = ..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\4Insert_Students.sql
+		..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\Create_Database.sql = ..\..\SQLServer2017DockerWebApi\College.Services\SqlScripts\Create_Database.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
