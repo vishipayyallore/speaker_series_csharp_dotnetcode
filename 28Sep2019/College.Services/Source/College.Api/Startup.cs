@@ -39,7 +39,7 @@ namespace College.Api
             {
                 endpoints.MapControllers();
 
-                endpoints.MapHealthChecks("/health");
+                endpoints.MapHealthChecks("/api/health");
             });
         }
     }
