@@ -1,5 +1,9 @@
+using College.Api.BAL;
+using College.Api.Common;
+using College.Api.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,6 +25,15 @@ namespace College.Api
             services.AddControllers();
 
             services.AddHealthChecks();
+
+            // Adding EF Core
+            var connectionString = Configuration[Constants.ConnectionString];
+            services.AddDbContext<CollegeDbContext>(o => o.UseSqlServer(connectionString));
+
+            // Application Services
+            //TODO: THIS SHOULD BE DONE USING INTERFACES
+            services.AddScoped<ProfessorsBal>();
+            services.AddScoped<ProfessorsDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
