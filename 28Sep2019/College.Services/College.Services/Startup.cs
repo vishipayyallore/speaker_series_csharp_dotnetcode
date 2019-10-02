@@ -31,7 +31,7 @@ namespace College.Services
         {
             services.AddControllers();
 
-            services.AddHealthChecks()
+            _ = services.AddHealthChecks()
                 .AddCheck<SimpleHealthCheck>("A Simple Web API Health Check");
 
             // Adding EF Core
