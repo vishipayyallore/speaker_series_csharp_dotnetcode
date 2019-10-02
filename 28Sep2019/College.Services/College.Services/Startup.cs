@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using College.Api.BAL;
 using College.Api.Common;
+using College.Api.HealthChecks;
 using College.Api.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,7 +31,8 @@ namespace College.Services
         {
             services.AddControllers();
 
-            services.AddHealthChecks();
+            services.AddHealthChecks()
+                .AddCheck<SimpleHealthCheck>("A Simple Web API Health Check");
 
             // Adding EF Core
             var connectionString = Configuration[Constants.ConnectionString];

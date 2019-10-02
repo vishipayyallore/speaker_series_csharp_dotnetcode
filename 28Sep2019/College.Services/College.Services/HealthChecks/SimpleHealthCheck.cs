@@ -14,7 +14,7 @@ namespace College.Api.HealthChecks
             if (healthCheckResultHealthy)
             {
                 return Task.FromResult(
-                    HealthCheckResult.Healthy("A healthy result."));
+                    HealthCheckResult.Healthy("College Web API is Healthy."));
             }
 
             return Task.FromResult(
