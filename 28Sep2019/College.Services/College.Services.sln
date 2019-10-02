@@ -6,6 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.Services", "College.Services\College.Services.csproj", "{4EDAF8B0-AC9B-4235-BCF7-750FC83DDF0A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{2E25139E-AA82-4D04-B613-6DBB2B7A44F8}"
+	ProjectSection(SolutionItems) = preProject
+		SqlScripts\1Create_Professors.sql = SqlScripts\1Create_Professors.sql
+		SqlScripts\2Create_Students.sql = SqlScripts\2Create_Students.sql
+		SqlScripts\3Insert_Professors.sql = SqlScripts\3Insert_Professors.sql
+		SqlScripts\4Insert_Students.sql = SqlScripts\4Insert_Students.sql
+		SqlScripts\Create_Database.sql = SqlScripts\Create_Database.sql
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DemoScripts", "DemoScripts", "{81CEBA8E-A654-4D99-AEAA-9765CDF1EB22}"
 	ProjectSection(SolutionItems) = preProject
